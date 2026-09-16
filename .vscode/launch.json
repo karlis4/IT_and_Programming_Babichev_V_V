@@ -8,7 +8,7 @@
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "program": "C:\\IT_and_Programming_Babichev_V_V\\lr_2\\lr_2.py",
+            "program": "C:\\IT_and_Programming_Babichev_V_V\\lr_4\\lr_4.py",
             "console": "integratedTerminal"
         }
     ]
