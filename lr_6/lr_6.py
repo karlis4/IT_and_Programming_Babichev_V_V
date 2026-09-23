@@ -1,7 +1,7 @@
 # Лабороторная работа 6. РАБОТА СО СТРОКАМИ
 # Бабичев В.В.
 # ИНБ-б-о-26-1
-# Вариант 6
+# Вариант 5
 
 def show_needed_symbol(symbols: dict):
     symbol_keys = list(symbols.keys())
@@ -46,7 +46,7 @@ def choose_symbol(symbols: dict):
             res_sum += el[2]
 
         print(f"Для символа {chosen_symbol} сумма составляет {res_sum}", end=" ")
-        y_n = input("Хотите продолжить?(y/n)")
+        y_n = input("Хотите продолжить?(y/n): ")
         exit = y_n
 
 
