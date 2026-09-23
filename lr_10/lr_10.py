@@ -5,7 +5,7 @@
 
 def sex_filtration(employees, sex):
     if sex == "m":
-        print(f"Количество женщин: {len(list(filter(lambda x: x[4] == "Male", employees)))}")
+        print(f"Количество мужчин: {len(list(filter(lambda x: x[4] == "Male", employees)))}")
     elif sex == "f":
         print(f"Количество женщин: {len(list(filter(lambda x: x[4] == "Female", employees)))}")
 
@@ -26,9 +26,9 @@ def salary_sorting(employees, desc_asc):
 
 def hasChild(employees, has_or_not):
     if has_or_not == "h":
-        print(f"Является родителем: {len(list(filter(lambda x: bool(x[6]), employees)))}")
+        print(f"Является родителем: {len(list(filter(lambda x: x[6] == 'true', employees)))}")
     elif has_or_not == "n":
-        print(f"Не является родителем: {len(list(filter(lambda x: not bool(x[6]), employees)))}")
+        print(f"Не является родителем: {len(list(filter(lambda x: x[6] == 'false', employees)))}")
 
 def lr_10(employees):
     exit = ""
@@ -45,7 +45,7 @@ def lr_10(employees):
 
         print(f"""    1. Отфильтровать по полу;
     2. Сортировать по зарплате;
-    3. Отфильтровать на предмет того, является ли сотрудник родителем (h - имеет/n - не имеет)""")
+    3. Отфильтровать на предмет того, является ли сотрудник родителем""")
                 
         print()
 
@@ -58,11 +58,11 @@ def lr_10(employees):
 
             sex_filtration(employees, sex_filter_param)
         elif variant == 2:
-            salary_sorting_param = input("Выберите asc (по возрастанию) или desc (по убыванию)")
+            salary_sorting_param = input("Выберите asc (по возрастанию) или desc (по убыванию): ")
 
             salary_sorting(employees, salary_sorting_param)
         elif variant == 3:
-            has_child_param = input("Выберите h (имеет) или n (не имеет)")
+            has_child_param = input("Выберите h (имеет) или n (не имеет): ")
 
             hasChild(employees, has_child_param)
 
